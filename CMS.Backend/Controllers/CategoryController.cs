@@ -1,0 +1,24 @@
+﻿/*
+*Sinh viên: Ma Văn Hải
+*Mssv: 2123110001
+*Ngày: 5-14-2026
+*Phiên bản: 1.0
+ */
+using Microsoft.AspNetCore.Mvc;
+using CMS.Data.Entities;
+namespace CMS.Backend.Controllers
+{
+    public class CategoryController : Controller
+    {
+        public IActionResult Index()
+        {
+            // Tạo danh sách dữ liệu mẫu trực tiếp trong code
+            var list = new List<Category> {
+            new Category { Id = 1, Name = "Tin Công Nghệ", Description = "Review Laptop, AI" },
+            new Category { Id = 2, Name = "Giáo Dục", Description = "Thông tin tuyển sinh" }
+        };
+            return View(list); // Gửi danh sách này sang giao diện
+        }
+    }
+
+}
