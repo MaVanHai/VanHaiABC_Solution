@@ -1,49 +1,105 @@
 ﻿/*
 *Sinh viên: Ma Văn Hải
 *Mssv: 2123110001
-*Ngày: 5-14-2026
+*Ngày: 5-24-2026
 *Phiên bản: 1.0
  */
-using Microsoft.AspNetCore.Mvc;
 
+using CMS.Data;
+using CMS.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
-using CMS.Data.Entities; // Phải có dòng này để dùng lớp User
+using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Backend.Controllers
 {
     public class UserController : Controller
     {
-        // Hàm Index: Hiển thị danh sách thành viên quản trị
+        private readonly ApplicationDbContext _context;
+
+        // Inject DbContext
+        public UserController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // Hiển thị danh sách người dùng
         public IActionResult Index()
         {
-            // 1. Tạo danh sách Người dùng giả (Mock Data)
-            var users = new List<User>
-            {
-                new User
-                {
-                    Id = 1,
-                    Username = "admin_thai",
-                    FullName = "Nguyễn Cao Thái",
-                    Role = "Administrator"
-                },
-                new User
-                {
-                    Id = 2,
-                    Username = "editor_01",
-                    FullName = "Trần Văn Biên Tập",
-                    Role = "Editor"
-                },
-                new User
-                {
-                    Id = 3,
-                    Username = "author_minh",
-                    FullName = "Lê Quang Minh",
-                    Role = "Author"
-                }
-            };
+            // Lấy dữ liệu thật từ database
+            var users = _context.Users.ToList();
 
-            // 2. Trả về View kèm theo danh sách người dùng
             return View(users);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(User model)
+        {
+            // Kiểm tra xem tên đăng nhập đã tồn tại chưa
+            var checkExist = _context.Users.Any(u => u.Username == model.Username);
+            if (checkExist)
+            {
+                ModelState.AddModelError("Username", "Tên đăng nhập này đã có người dùng!");
+                return View(model);
+            }
+
+            // Lưu User mới vào Database
+            _context.Users.Add(model);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+
+            return View(user);
+        }
+
+        // POST: Thực hiện lưu thay đổi
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(User model, string NewPassword)
+        {
+            var existingUser = _context.Users.FirstOrDefault(u => u.Id == model.Id);
+
+            if (existingUser == null)
+            {
+                return NotFound();
+            }
+
+            // Chỉ update field cần thiết
+            existingUser.FullName = model.FullName;
+            existingUser.Role = model.Role;
+
+            // Nếu có đổi password
+            if (!string.IsNullOrEmpty(NewPassword))
+            {
+                existingUser.PasswordHash = NewPassword;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }

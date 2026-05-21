@@ -15,11 +15,12 @@ namespace CMS.Data.Entities
     public class Category
     {
         public int Id { get; set; }
-        public string Name { get; set; } // Tên danh mục (vd: Tin Giáo Dục)
-        public string Description { get; set; }
 
-        // Quan hệ: Một danh mục có nhiều bài viết
+        public string Name { get; set; } = string.Empty;
+
+        public string Description { get; set; } = string.Empty;
+
         public virtual ICollection<Post> Posts { get; set; }
+            = new List<Post>();
     }
-
 }
