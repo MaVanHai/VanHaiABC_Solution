@@ -1,0 +1,55 @@
+﻿@* 
+*Sinh viên: Ma Văn Hải
+*Mssv: 2123110001
+*Ngày: 5-28-2026
+*Phiên bản: 1.0
+*@
+@model CMS.Data.Entities.OrderDetail
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<h2 class="text-primary">
+    THÊM CHI TIẾT ĐƠN HÀNG
+</h2>
+
+<form asp-action="Create" method="post">
+
+    <input type="hidden" asp-for="OrderId" />
+
+    <div class="mb-3">
+        <label class="fw-bold">Sản phẩm</label>
+
+        <select asp-for="ProductId"
+                asp-items="ViewBag.Products"
+                class="form-control">
+
+            <option value="">
+                -- Chọn sản phẩm --
+            </option>
+
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="fw-bold">Số lượng</label>
+
+        <input asp-for="Quantity"
+               class="form-control" />
+    </div>
+
+    <button type="submit"
+            class="btn btn-success">
+
+        Thêm
+    </button>
+
+    <a asp-action="Index"
+       asp-route-id="@Model.OrderId"
+       class="btn btn-secondary">
+
+        Quay lại
+    </a>
+
+</form>

@@ -39,4 +39,5 @@ namespace CMS.Data.Entities
         [ForeignKey("CategoryProductId")]
         public virtual CategoryProduct? CategoryProduct { get; set; }
     }
+
 }
