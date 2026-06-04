@@ -1,0 +1,70 @@
+﻿@* 
+*Sinh viên: Ma Văn Hải
+*Mssv: 2123110001
+*Ngày: 5-28-2026
+*Phiên bản: 1.0
+*@
+@model CMS.Data.Entities.Product
+@{
+    Layout = "_LayoutAdmin";
+}
+<div class="container mt-4">
+
+    <h2 class="text-success mb-4">
+        THÊM SẢN PHẨM
+    </h2>
+
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label fw-bold"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryProductId"
+                   class="form-label fw-bold">
+            </label>
+
+            <select asp-for="CategoryProductId"
+                    asp-items="ViewBag.CategoryProducts"
+                    class="form-control">
+
+                <option value="">
+                    -- Chọn danh mục --
+                </option>
+
+            </select>
+
+            <span asp-validation-for="CategoryProductId"
+                  class="text-danger">
+            </span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label fw-bold"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="StockQuantity" class="form-label fw-bold"></label>
+            <input asp-for="StockQuantity" class="form-control" />
+            <span asp-validation-for="StockQuantity" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label fw-bold"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Lưu
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Quay lại
+        </a>
+
+    </form>
+
+</div>
