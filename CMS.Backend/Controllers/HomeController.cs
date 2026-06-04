@@ -1,13 +1,8 @@
-/*
-*Sinh viên: Ma V?n H?i
-*Mssv: 2123110001
-*Ngày: 5-24-2026
-*Phiên b?n: 1.0
- */
+using System.Diagnostics;
+using CMS.Backend.Models;
+using CMS.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CMS.Data;
-using System.Linq;
 
 namespace CMS.Backend.Controllers
 {
@@ -22,14 +17,15 @@ namespace CMS.Backend.Controllers
 
         public IActionResult Index()
         {
-            // L?y 3 bài vi?t m?i nh?t
+            // LINQ: L?y 3 bài vi?t m?i nh?t
             var latestPosts = _context.Posts
-                .Include(p => p.Category)
-                .OrderByDescending(p => p.CreatedDate)
-                .Take(3)
-                .ToList();
+                .Include(p => p.Category) // L?y kèm thông tin Danh m?c (Join b?ng)
+                .OrderByDescending(p => p.CreatedDate) // S?p x?p theo ngày t?o m?i nh?t    
+                .Take(3) // L?y 3 bài vi?t ??u tiên sau khi ?ã s?p x?p (t?c là 3 bài m?i nh?t)
+                .ToList();// Chuy?n k?t qu? thành List ?? truy?n sang View
 
             return View(latestPosts);
         }
+
     }
 }

@@ -23,6 +23,7 @@
             <tr>
                 <th>ID</th>
                 <th>Tên sản phẩm</th>
+                <th>Ảnh</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
                 <th width="180">Thao tác</th>
@@ -34,6 +35,15 @@
                     <tr>
                         <td>@item.Id</td>
                         <td>@item.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img src="@item.ImageUrl"
+                                 width="80"
+                                 height="80"
+                                 style="object-fit:cover" />
+                        }
+                    </td>
                         <td>@item.Price.ToString("N0") đ</td>
                         <td>@item.StockQuantity</td>
                         <td>

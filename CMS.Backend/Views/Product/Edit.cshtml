@@ -14,10 +14,12 @@
         CẬP NHẬT SẢN PHẨM
     </h2>
 
-    <form asp-action="Edit" method="post">
+    <form asp-action="Edit"
+          method="post"
+          enctype="multipart/form-data">
 
         <input type="hidden" asp-for="Id" />
-
+        <input type="hidden" asp-for="ImageUrl" />
         <div class="mb-3">
             <label asp-for="Name" class="form-label fw-bold"></label>
             <input asp-for="Name" class="form-control" />
@@ -41,6 +43,18 @@
             <span asp-validation-for="CategoryProductId"
                   class="text-danger">
             </span>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">
+                Chọn ảnh mới
+            </label>
+
+            <input type="file"
+                   name="uploadImage"
+                   class="form-control" />
         </div>
         <div class="mb-3">
             <label asp-for="Price" class="form-label fw-bold"></label>

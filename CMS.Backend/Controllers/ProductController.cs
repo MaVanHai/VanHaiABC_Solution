@@ -38,7 +38,7 @@ namespace CMS.Backend.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Product model)
+        public IActionResult Create(Product model, IFormFile uploadImage)
         {
             if (!ModelState.IsValid)
             {
@@ -51,12 +51,35 @@ namespace CMS.Backend.Controllers
                 return View(model);
             }
 
+            if (uploadImage != null && uploadImage.Length > 0)
+            {
+                string folder = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "uploads",
+                    "products");
+
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+
+                string fileName = Guid.NewGuid() +
+                                 Path.GetExtension(uploadImage.FileName);
+
+                string filePath = Path.Combine(folder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    uploadImage.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/uploads/products/" + fileName;
+            }
+
             _context.Products.Add(model);
             _context.SaveChanges();
 
             return RedirectToAction("Index");
         }
-
         public IActionResult Delete(int id)
         {
             var product = _context.Products.Find(id);
@@ -90,7 +113,7 @@ namespace CMS.Backend.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Product model)
+        public IActionResult Edit(Product model, IFormFile uploadImage)
         {
             if (!ModelState.IsValid)
             {
@@ -102,6 +125,40 @@ namespace CMS.Backend.Controllers
                 );
 
                 return View(model);
+            }
+
+            if (uploadImage != null && uploadImage.Length > 0)
+            {
+                string folder = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "uploads",
+                    "products");
+
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+
+                string fileName = Guid.NewGuid() +
+                                 Path.GetExtension(uploadImage.FileName);
+
+                string filePath = Path.Combine(folder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    uploadImage.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/uploads/products/" + fileName;
+            }
+            else
+            {
+                var oldProduct = _context.Products
+                    .FirstOrDefault(x => x.Id == model.Id);
+
+                if (oldProduct != null)
+                {
+                    model.ImageUrl = oldProduct.ImageUrl;
+                }
             }
 
             _context.Products.Update(model);
