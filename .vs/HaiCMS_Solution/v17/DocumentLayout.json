@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -31,20 +67,8 @@
       "RelativeMoniker": "D:0:0:{9A083703-AFE7-478C-86B4-FB86AA68F553}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,14 +87,6 @@
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categoriesproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,16 +99,8 @@
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\post\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -101,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\views\\post\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D289BD-8E2A-4939-B618-EE39D0EFACF5}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A083703-AFE7-478C-86B4-FB86AA68F553}|CMS.Data\\CMS.Data.csproj|c:\\users\\pc\\source\\repos\\haicms_solution\\cms.data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,76 +158,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Create.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Create.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Create.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:49:39.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Details.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwCYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:15:37.481Z",
+              "DocumentIndex": 5,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostController.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAswKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:34:59.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAkwHEAAAAAAAAAAAAAAA==",
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostsController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostsController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:48:31.405Z",
+              "WhenOpened": "2026-06-04T02:06:06.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswCkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T02:30:36.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwD8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:55:06.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAPAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswCMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:49:57.296Z",
+              "WhenOpened": "2026-06-04T02:54:57.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Edit.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAmwDMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:49:48.347Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Program.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Program.cs",
+              "RelativeToolTip": "CMS.Backend\\Program.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAEgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:52:21.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-11T01:02:26.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwDIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T03:24:49.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Data\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "CMS.Data\\Entities\\Product.cs",
@@ -231,25 +274,84 @@
               "RelativeToolTip": "CMS.Data\\Entities\\Product.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:48:03.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T03:48:03.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T03:49:57.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwDQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T03:49:48.347Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Program.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Program.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Program.cs",
-              "RelativeToolTip": "CMS.Backend\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowEgAAAATAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:52:21.121Z",
+              "WhenOpened": "2026-06-04T03:25:50.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAkwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T03:48:31.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Details.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T03:15:37.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T03:49:39.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CustomerController.cs",
@@ -257,12 +359,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\CustomerController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAowEIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:11:42.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:11:42.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "CategoriesProductsController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CategoriesProductsController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoriesProductsController.cs",
@@ -270,12 +371,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\CategoriesProductsController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:07:25.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:07:25.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductsController.cs",
@@ -283,12 +383,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAkwEIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:11:08.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:11:08.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
@@ -296,38 +395,11 @@
               "RelativeToolTip": "CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T02:55:39.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:55:39.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T02:54:57.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PostController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\PostController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAswGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:34:59.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "OrderDetailController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\OrderDetailController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrderDetailController.cs",
@@ -335,12 +407,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\OrderDetailController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:25:35.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T03:25:35.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\HomeController.cs",
@@ -348,38 +419,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:20:07.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:20:07.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADIAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:24:49.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:25:50.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrdersController.cs",
@@ -387,12 +431,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:10:18.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:10:18.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrderController.cs",
@@ -400,25 +443,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\OrderController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T03:25:31.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T03:25:31.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:55:06.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "CustomersController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\CustomersController.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CustomersController.cs",
@@ -426,12 +455,11 @@
               "RelativeToolTip": "CMS.Backend\\Controllers\\CustomersController.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAYwC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:09:53.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:09:53.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\appsettings.json",
               "RelativeDocumentMoniker": "CMS.Backend\\appsettings.json",
@@ -439,25 +467,11 @@
               "RelativeToolTip": "CMS.Backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-04T02:51:33.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:51:33.608Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "PostsController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
-              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostsController.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
-              "RelativeToolTip": "CMS.Backend\\Controllers\\PostsController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAADwv0AAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:06:06.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Edit.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Edit.cshtml",
@@ -465,25 +479,11 @@
               "RelativeToolTip": "CMS.Backend\\Views\\Post\\Edit.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAIwEAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:13:09.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T03:13:09.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
-              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
-              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwCcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T02:30:36.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Post\\Create.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Create.cshtml",
@@ -491,12 +491,11 @@
               "RelativeToolTip": "CMS.Backend\\Views\\Post\\Create.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAAIwFEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T03:12:55.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T03:12:55.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "CMS.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -508,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "CMS.Data\\ApplicationDbContext.cs",
@@ -520,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Data\\Entities\\User.cs",
               "RelativeDocumentMoniker": "CMS.Data\\Entities\\User.cs",
@@ -532,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "_LayoutAdmin.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
@@ -544,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "CMS.Backend\\Models\\ErrorViewModel.cs",
@@ -556,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "Post.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Data\\Entities\\Post.cs",
               "RelativeDocumentMoniker": "CMS.Data\\Entities\\Post.cs",
@@ -568,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Shared\\_Layout.cshtml",
@@ -580,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Shared\\Error.cshtml",
@@ -592,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\CategoryProduct\\Index.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\CategoryProduct\\Index.cshtml",
@@ -604,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\HaiCMS_Solution\\CMS.Backend\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "CMS.Backend\\Views\\Order\\Index.cshtml",
