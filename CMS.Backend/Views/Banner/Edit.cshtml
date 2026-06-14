@@ -1,0 +1,53 @@
+﻿@*
+*Sinh viên: Ma Văn Hải
+*Mssv: 2123110001
+*Ngày: 5-24-2026
+*Phiên bản: 1.0
+*@
+
+@model CMS.Data.Entities.Banner
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Sửa Banner";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-warning">
+            <h4>SỬA BANNER</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tiêu đề</label>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+
+
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Ảnh mới</label>
+                    <input type="file" name="uploadImage" class="form-control" />
+                </div>
+
+                <button class="btn btn-success">
+                    Cập nhật
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    Quay lại
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

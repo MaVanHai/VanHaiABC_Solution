@@ -1,36 +1,86 @@
 import React from 'react';
-import CategoryProductList from './components/CategoryProductList';
-import ProductList from './components/ProductList';
-import PostList from './components/PostList'; // Nhớ thêm dòng import này để kích hoạt phần tin tức
+// Import các thành phần lõi của thư viện điều hướng đường dẫn
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+// 1. IMPORT CÁC COMPONENT TOÀN CỤC (LAYOUT CHUNG)
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+
+
+// 2. IMPORT CÁC TRANG CHỨC NĂNG (GIAO DIỆN CHÍNH)
+import Home from './pages/home/index';
+import Shop from './pages/shop/index';                  // Tự động nạp file pages/shop/index.jsx
+import ProductDetail from './pages/product-detail'; // Tự động nạp file pages/product-detail/index.jsx
+import Blog from './pages/blog/index';                  // Tự động nạp file pages/blog/index.jsx
+// import BlogDetail from './pages/blog/index';  // Nạp trang chi tiết bài viết cụ thể
+import Cart from './pages/cart/index';                  // Tự động nạp file pages/cart/index.jsx
+import Checkout from './pages/checkout/index';          // Tự động nạp file pages/checkout/index.jsx
+
 
 function App() {
-  return (
-    <div className="container mt-5">
-      <header className="pb-3 mb-4 border-bottom">
-        <span className="fs-4 font-weight-bold text-dark">
-          👗 FASHION BOUTIQUE - THỜI TRANG CÔNG SỞ & DẠ HỘI
-        </span>
-      </header>
+    return (
+        // Khởi tạo bộ định tuyến bao bọc toàn bộ ứng dụng Web
+        <Router>
+            <div className="d-flex flex-column min-vh-100 bg-light">
 
-      {/* KHU VỰC 1: SHOPPING (Sản phẩm và Bộ lọc danh mục sản phẩm) */}
-      <div className="row">
-        <div className="col-md-4">
-          <CategoryProductList />
-        </div>
-        <div className="col-md-8">
-          <h4 className="mb-4 text-uppercase text-secondary font-weight-bold">Bộ sưu tập mới nhất</h4>
-          <ProductList />
-        </div>
-      </div>
 
-      {/* KHU VỰC 2: BLOG & BLOG CATEGORIES (Tin tức thời trang công sở, dạ hội) */}
-      <div className="row mt-5">
-        <div className="col-12">
-          <PostList />
-        </div>
-      </div>
-    </div>
-  );
+
+
+                {/* KHU VỰC NỘI DUNG ĐỘNG (Thay đổi ruột tùy theo URL trên thanh địa chỉ) */}
+                <main className="flex-grow-1">
+                    <Routes>
+                        {/* Cấu hình Trang chủ - Khớp hoàn toàn với địa chỉ "/home" */}
+                        <Route path="/" element={<Home />} />
+
+
+                        {/* Cấu hình Trang Cửa hàng - Địa chỉ "/shop" */}
+                        <Route path="/shop" element={<Shop />} />
+
+
+                        {/* Cấu hình Trang Chi tiết sản phẩm - Sử dụng tham số động ":id" */}
+                        {/* Ví dụ khi vào link: /product/5 -> useParams() sẽ lấy được id = 5 */}
+                        <Route path="/product/:id" element={<ProductDetail />} />
+
+
+                        {/* Cấu hình Trang Danh sách tin tức - Địa chỉ "/blog" */}
+                        <Route path="/blog" element={<Blog />} />
+
+
+                        {/* Cấu hình Trang Chi tiết bài viết - Địa chỉ "/blog/:id" */}
+                        {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
+
+
+                        {/* Cấu hình Trang Giỏ hàng cá nhân - Địa chỉ "/cart" */}
+                        <Route path="/cart" element={<Cart />} />
+
+
+                        {/* Cấu hình Trang Điền thông tin thanh toán - Địa chỉ "/checkout" */}
+                        <Route path="/checkout" element={<Checkout />} />
+
+
+                        {/* XỬ LÝ KỊCH BẢN TRANG LỖI 404 (Khi sinh viên gõ sai URL) */}
+                        <Route path="*" element={
+                            <div className="container text-center py-5 my-5">
+                                <img
+                                    src="https://cdn-icons-png.flaticon.com/512/580/580185.png"
+                                    alt="404"
+                                    className="mb-4"
+                                    style={{ width: '100px', opacity: 0.6 }}
+                                />
+                                <h2 className="fw-bold text-secondary">404 - KHÔNG TÌM THẤY TRANG</h2>
+                                <p className="text-muted">Đường dẫn bạn truy cập không tồn tại trên hệ thống ThaiCMS.</p>
+                                <a href="/" className="btn btn-dark btn-sm mt-2">Quay lại Trang Chủ</a>
+                            </div>
+                        } />
+                    </Routes>
+                </main>
+
+
+            </div>
+        </Router>
+    );
 }
+
 
 export default App;

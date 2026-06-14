@@ -1,15 +1,15 @@
 import axiosClient from '../api/axiosClient';
 
 const blogService = {
-    // Hàm gọi API lấy danh mục các chủ đề bài viết
-    getBlogCategories: () => {
-        const url = '/Categories'; // Khớp với Route quản lý chuyên mục tin tức ở Backend
+    // 1. Hàm lấy danh sách toàn bộ bài viết (Post) từ Backend
+    getAllPosts: () => {
+        const url = '/Posts'; // Phải khớp chính xác với cấu hình Route trong PostController ở Backend
         return axiosClient.get(url);
     },
 
-    // Hàm gọi API lấy toàn bộ các bài viết (Mẹo phối đồ, tin tức thời trang)
-    getAllPosts: () => {
-        const url = '/Posts'; // Khớp với Route quản lý bài viết ở Backend
+    // 2. Hàm lấy chi tiết 1 bài viết theo ID (Phục vụ trang xem chi tiết sau này)
+    getPostById: (id) => {
+        const url = `/Posts/${id}`;
         return axiosClient.get(url);
     }
 };
