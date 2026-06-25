@@ -25,13 +25,19 @@ namespace CMS.Backend.Controllers
         public IActionResult GetAll()
         {
             var posts = _context.Posts
-                .OrderByDescending(p => p.Id) 
-                .Select(p => new {            
+                .OrderByDescending(p => p.Id)
+                .Select(p => new
+                {
                     p.Id,
                     p.Title,
+                    p.Content,
                     p.ImageUrl,
                     p.CreatedDate,
-                    CategoryName = p.Category.Name 
+
+                    // QUAN TRỌNG
+                    p.CategoryId,
+
+                    CategoryName = p.Category.Name
                 })
                 .ToList();
 
@@ -42,11 +48,15 @@ namespace CMS.Backend.Controllers
         {
             var posts = _context.Posts
                 .Where(p => p.CategoryId == categoryId)
-                .Select(p => new {
+                .Select(p => new
+                {
                     p.Id,
                     p.Title,
+                    p.Content,
                     p.ImageUrl,
-                    p.CreatedDate
+                    p.CreatedDate,
+                    p.CategoryId,
+                    CategoryName = p.Category.Name
                 })
                 .ToList();
 
@@ -56,8 +66,18 @@ namespace CMS.Backend.Controllers
         public IActionResult GetDetail(int id)
         {
             var post = _context.Posts
-                .FirstOrDefault(p => p.Id == id);
-
+                .Where(p => p.Id == id)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Title,
+                    p.Content,
+                    p.ImageUrl,
+                    p.CreatedDate,
+                    p.CategoryId,
+                    CategoryName = p.Category.Name
+                })
+                .FirstOrDefault();
             if (post == null)
             {
                 return NotFound(new { message = "Không tìm thấy bài viết này trong hệ thống" });

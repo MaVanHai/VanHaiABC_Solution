@@ -1,7 +1,7 @@
 ﻿using CMS.Data;
 using CMS.Data.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Backend.Controllers
 {
@@ -16,53 +16,245 @@ namespace CMS.Backend.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// API: Tiếp nhận đơn đặt hàng từ giỏ hàng FrontEnd gửi lên
-        /// Đường dẫn: POST https://localhost:xxxx/api/Orders
-        /// </summary>
+        // ==========================
+        // TẠO ĐƠN HÀNG
+        // POST: api/orders
+        // ==========================
         [HttpPost]
-        public async Task<IActionResult> CreateOrder([FromBody] OrderInputDTO input)
+        public async Task<IActionResult> CreateOrder(
+            [FromBody] OrderInputDTO input)
         {
-            // 1. Kiểm tra kịch bản lỗi bảo vệ: Nếu dữ liệu truyền lên trống rỗng
-            if (input == null)
+            if (
+                input == null ||
+                input.Items == null ||
+                !input.Items.Any()
+            )
             {
-                return BadRequest(new { message = "Dữ liệu đơn hàng không hợp lệ" });
+                return BadRequest(new
+                {
+                    message = "Giỏ hàng không hợp lệ"
+                });
             }
 
             try
             {
-                // Bước A: Tự động khởi tạo cấu trúc thực thể Đơn hàng mới
-                // LƯU Ý: Đã hiệu chỉnh bỏ trường TotalAmount, dùng trường [Notes] số nhiều theo đúng hình ảnh thực tế
-                var newOrder = new Order
+                var order = new Order
                 {
-                    OrderDate = DateTime.Now, // Tự động lấy ngày giờ thực tế máy tính lúc mua
                     CustomerId = input.CustomerId,
-                    Status = 0,               // 0: Mặc định đơn hàng mới ở trạng thái "Chờ xử lý"
+                    OrderDate = DateTime.Now,
+                    Status = 0,
                     Notes = input.Notes
                 };
 
-                // Bước B: Thêm vào bảng tạm và chốt lưu xuống SQL Server
-                _context.Orders.Add(newOrder);
-                await _context.SaveChangesAsync(); // Ép hệ thống sinh ra mã ID Đơn hàng tự động tăng
+                _context.Orders.Add(order);
 
-                // Bước C: Trả về mã thành công 201 Created và gửi ngược lại mã ID đơn hàng vừa tạo
-                return StatusCode(201, new
+                await _context.SaveChangesAsync();
+
+                foreach (var item in input.Items)
                 {
-                    message = "Đặt hàng thành công!",
-                    orderId = newOrder.Id
+                    var product =
+                        await _context.Products.FindAsync(
+                            item.ProductId
+                        );
+
+                    if (product == null)
+                    {
+                        return BadRequest(new
+                        {
+                            message =
+                                $"Không tìm thấy sản phẩm ID {item.ProductId}"
+                        });
+                    }
+
+                    if (
+                        product.StockQuantity <
+                        item.Quantity
+                    )
+                    {
+                        return BadRequest(new
+                        {
+                            message =
+                                $"Sản phẩm {product.Name} không đủ tồn kho"
+                        });
+                    }
+
+                    var orderDetail =
+                        new OrderDetail
+                        {
+                            OrderId = order.Id,
+                            ProductId = product.Id,
+                            Quantity = item.Quantity,
+                            UnitPrice = product.Price
+                        };
+
+                    _context.OrderDetails.Add(
+                        orderDetail
+                    );
+
+                    // Trừ tồn kho
+                    product.StockQuantity -=
+                        item.Quantity;
+                }
+
+                await _context.SaveChangesAsync();
+
+                return Ok(new
+                {
+                    message = "Đặt hàng thành công",
+                    orderId = order.Id
                 });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { message = "Lỗi xử lý tạo đơn hàng ngầm", detail = ex.Message });
+                return StatusCode(
+                    500,
+                    new
+                    {
+                        message = ex.Message
+                    }
+                );
             }
+        }
+
+        // ==========================
+        // LẤY DANH SÁCH ĐƠN HÀNG
+        // THEO KHÁCH HÀNG
+        // GET: api/orders/customer/1
+        // ==========================
+        [HttpGet("customer/{customerId}")]
+        public IActionResult GetOrdersByCustomer(
+            int customerId)
+        {
+            var orders = _context.Orders
+                .Include(x => x.OrderDetails)
+                .ThenInclude(x => x.Product)
+                .Where(x => x.CustomerId == customerId)
+                .OrderByDescending(x => x.OrderDate)
+                .Select(x => new
+                {
+                    x.Id,
+
+                    x.OrderDate,
+
+                    x.Status,
+
+                    x.Notes,
+
+                    TotalAmount =
+                        x.OrderDetails.Sum(d =>
+                            d.Quantity * d.UnitPrice),
+
+                    TotalQuantity =
+                        x.OrderDetails.Sum(d =>
+                            d.Quantity),
+
+                    ProductCount =
+                        x.OrderDetails.Count(),
+
+                    Products =
+                        x.OrderDetails.Select(d => new
+                        {
+                            d.ProductId,
+
+                            ProductName =
+                                d.Product.Name,
+
+                            ProductImage =
+                                d.Product.ImageUrl,
+
+                            d.Quantity,
+
+                            d.UnitPrice,
+
+                            LineTotal =
+                                d.Quantity *
+                                d.UnitPrice
+                        })
+                })
+                .ToList();
+
+            return Ok(orders);
+        }
+
+        // ==========================
+        // CHI TIẾT ĐƠN HÀNG
+        // GET: api/orders/5
+        // ==========================
+        [HttpGet("{id}")]
+        public IActionResult GetOrderDetail(
+            int id)
+        {
+            var order = _context.Orders
+                .Include(x =>
+                    x.OrderDetails)
+                .ThenInclude(x =>
+                    x.Product)
+                .FirstOrDefault(x =>
+                    x.Id == id);
+
+            if (order == null)
+            {
+                return NotFound(new
+                {
+                    message =
+                        "Không tìm thấy đơn hàng"
+                });
+            }
+
+            var result = new
+            {
+                order.Id,
+                order.OrderDate,
+                order.Status,
+                order.Notes,
+
+                Products = order.OrderDetails
+                    .Select(x => new
+                    {
+                        ProductId =
+                            x.ProductId,
+
+                        ProductName =
+                            x.Product.Name,
+
+                        Quantity =
+                            x.Quantity,
+
+                        UnitPrice =
+                            x.UnitPrice,
+
+                        Total =
+                            x.UnitPrice *
+                            x.Quantity
+                    }),
+
+                TotalAmount =
+                    order.OrderDetails.Sum(x =>
+                        x.UnitPrice *
+                        x.Quantity)
+            };
+
+            return Ok(result);
         }
     }
 
-    // LỚP DTO TRUNG GIAN ĐỂ HỨNG DỮ LIỆU TỪ FRONTEND TRUYỀN LÊN
+    // ==========================
+    // DTO TẠO ĐƠN HÀNG
+    // ==========================
     public class OrderInputDTO
     {
         public int CustomerId { get; set; }
-        public string Notes { get; set; }
+
+        public string? Notes { get; set; }
+
+        public List<OrderItemDTO> Items { get; set; }
+            = new();
+    }
+
+    public class OrderItemDTO
+    {
+        public int ProductId { get; set; }
+
+        public int Quantity { get; set; }
     }
 }

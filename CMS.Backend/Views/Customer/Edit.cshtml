@@ -14,14 +14,21 @@ Layout = "_LayoutAdmin";
 
     <input type="hidden" asp-for="Id" />
 
+    <div asp-validation-summary="All"
+         class="text-danger"></div>
+
     <div class="mb-2">
         <label>Họ tên</label>
         <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName"
+              class="text-danger"></span>
     </div>
 
     <div class="mb-2">
         <label>Email</label>
         <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"
+              class="text-danger"></span>
     </div>
 
     <div class="mb-2">
@@ -33,13 +40,22 @@ Layout = "_LayoutAdmin";
         <label>Địa chỉ</label>
         <input asp-for="Address" class="form-control" />
     </div>
-     <div class="mb-3">
-        <label>Mật khẩu mới</label>
-            <input asp-for="Password" class="form-control" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-     </div>
 
-    <button type="submit" class="btn btn-warning mt-2">Cập nhật</button>
-    <a asp-action="Index" class="btn btn-secondary mt-2">Quay lại</a>
+    <div class="mb-3">
+        <label>Mật khẩu mới</label>
+        <input type="password"
+               name="Password"
+               class="form-control" />
+    </div>
+
+    <button type="submit"
+            class="btn btn-warning mt-2">
+        Cập nhật
+    </button>
 
 </form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

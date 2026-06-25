@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import blogService from "../../services/postService";
 import PostCard from "../../components/PostCard";
-
+import { Link } from "react-router-dom";
 function LatestBlog() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -83,13 +83,13 @@ function LatestBlog() {
 
                 {/* BUTTON XEM THÊM */}
                 <div className="mt-10 text-center">
-                    <a
-                        href="/blog"
-                        className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white transition hover:bg-emerald-600"
-                    >
-                        Xem tất cả bài viết
-                        <i className="fas fa-arrow-right"></i>
-                    </a>
+     <Link
+    to="/blog"
+    className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white transition hover:bg-emerald-600"
+>
+    Xem tất cả bài viết
+    <i className="fas fa-arrow-right"></i>
+</Link>
                 </div>
 
             </div>

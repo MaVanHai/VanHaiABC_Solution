@@ -7,7 +7,6 @@
 using CMS.Data;
 using CMS.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
 
 namespace CMS.Backend.Controllers
 {
@@ -37,8 +36,30 @@ namespace CMS.Backend.Controllers
         {
             if (ModelState.IsValid)
             {
-                var hasher = new PasswordHasher<Customer>();
-                model.Password = hasher.HashPassword(model, Password);
+                var checkEmail = _context.Customers.Any(x => x.Email == model.Email);
+
+                if (checkEmail)
+                {
+                    ModelState.AddModelError(
+                        "Email",
+                        "Email đã tồn tại"
+                    );
+
+                    return View(model);
+                }
+
+                if (string.IsNullOrWhiteSpace(Password))
+                {
+                    ModelState.AddModelError(
+                        "Password",
+                        "Vui lòng nhập mật khẩu"
+                    );
+
+                    return View(model);
+                }
+
+                // Lưu mật khẩu thô giống API
+                model.Password = Password;
 
                 _context.Customers.Add(model);
                 _context.SaveChanges();
@@ -67,7 +88,8 @@ namespace CMS.Backend.Controllers
         {
             var customer = _context.Customers.Find(id);
 
-            if (customer == null) return NotFound();
+            if (customer == null)
+                return NotFound();
 
             return View(customer);
         }
@@ -76,17 +98,34 @@ namespace CMS.Backend.Controllers
         public IActionResult Edit(Customer model, string Password)
         {
             var existing = _context.Customers.Find(model.Id);
-            if (existing == null) return NotFound();
+
+            if (existing == null)
+                return NotFound();
+
+            var checkEmail = _context.Customers.Any(
+                x => x.Email == model.Email &&
+                     x.Id != model.Id
+            );
+
+            if (checkEmail)
+            {
+                ModelState.AddModelError(
+                    "Email",
+                    "Email đã tồn tại"
+                );
+
+                return View(model);
+            }
 
             existing.FullName = model.FullName;
             existing.Email = model.Email;
             existing.Phone = model.Phone;
             existing.Address = model.Address;
 
-            if (!string.IsNullOrEmpty(Password))
+            // Nếu nhập mật khẩu mới thì cập nhật
+            if (!string.IsNullOrWhiteSpace(Password))
             {
-                var hasher = new PasswordHasher<Customer>();
-                existing.Password = hasher.HashPassword(existing, Password);
+                existing.Password = Password;
             }
 
             _context.SaveChanges();

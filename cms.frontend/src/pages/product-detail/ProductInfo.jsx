@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
     FaShoppingCart,
-    FaBolt,
     FaStar,
 } from "react-icons/fa";
 
@@ -28,6 +27,40 @@ function ProductInfo({ product }) {
             setQuantity(quantity - 1);
         }
     };
+    const addToCart = () => {
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingItem = cart.find(
+        (x) => x.id === product.id
+    );
+
+    if (existingItem) {
+        existingItem.quantity += quantity;
+
+        if (
+            existingItem.quantity >
+            product.stockQuantity
+        ) {
+            existingItem.quantity =
+                product.stockQuantity;
+        }
+    } else {
+        cart.push({
+            ...product,
+            quantity,
+        });
+    }
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+    window.dispatchEvent(
+        new Event("cartUpdated")
+    );
+    alert("Đã thêm vào giỏ hàng");
+};
 
     return (
         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
@@ -99,9 +132,12 @@ function ProductInfo({ product }) {
                             Mô tả sản phẩm
                         </h3>
 
-                        <p className="text-slate-600 leading-7">
-                            {product.description}
-                        </p>
+                        <div
+                            className="text-slate-600 leading-7"
+                            dangerouslySetInnerHTML={{
+                                __html: product.description
+                            }}
+                        />
                     </div>
 
                     {/* Quantity */}
@@ -137,18 +173,19 @@ function ProductInfo({ product }) {
                     <div className="mt-10 flex flex-wrap gap-4">
 
                         <button
+                            onClick={addToCart}
                             className="flex-1 min-w-[220px] rounded-xl bg-emerald-500 hover:bg-emerald-600 py-4 text-white font-semibold flex items-center justify-center gap-3"
                         >
                             <FaShoppingCart />
                             Thêm vào giỏ hàng
                         </button>
 
-                        <button
+                        {/* <button
                             className="flex-1 min-w-[220px] rounded-xl bg-orange-500 hover:bg-orange-600 py-4 text-white font-semibold flex items-center justify-center gap-3"
                         >
                             <FaBolt />
                             Mua ngay
-                        </button>
+                        </button> */}
 
                     </div>
 

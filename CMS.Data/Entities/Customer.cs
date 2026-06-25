@@ -4,35 +4,28 @@
 *Ngày: 5-14-2026
 *Phiên bản: 1.0
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.ComponentModel.DataAnnotations;
 
 namespace CMS.Data.Entities
 {
-    // Khách hàng
     public class Customer
     {
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Họ tên không được để trống")]
         public string FullName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email không được để trống")]
+        [EmailAddress(ErrorMessage = "Email không đúng định dạng")]
         public string Email { get; set; }
 
         public string? Phone { get; set; }
 
         public string? Address { get; set; }
 
-        [Required]
-        public string Password { get; set; } // Lưu mật khẩu thô theo yêu cầu tối giản
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
+        public string Password { get; set; }
 
         public virtual ICollection<Order>? Orders { get; set; }
     }

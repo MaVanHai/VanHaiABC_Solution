@@ -1,82 +1,173 @@
-import React from "react";
+import React, {
+    useEffect,
+    useState
+} from "react";
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
-import {
-    ShoppingCart,
-    ArrowLeft,
-    Cpu,
-    Package
-} from "lucide-react";
-
+import CartTable from "./CartTable";
+import { useNavigate } from "react-router-dom";
 function Cart() {
+    const navigate = useNavigate();
+    const [cartItems, setCartItems] =
+        useState([]);
+
+    useEffect(() => {
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+
+        setCartItems(cart);
+
+    }, []);
+
+    const saveCart = (newCart) => {
+
+        setCartItems(newCart);
+
+        localStorage.setItem(
+            "cart",
+            JSON.stringify(newCart)
+        );
+
+        window.dispatchEvent(
+            new Event("cartUpdated")
+        );
+    };
+
+const increaseQty = (id) => {
+
+    const newCart = cartItems.map((item) => {
+
+        if (item.id === id) {
+
+            if (
+                item.quantity >=
+                item.stockQuantity
+            ) {
+                return item;
+            }
+
+            return {
+                ...item,
+                quantity: item.quantity + 1
+            };
+        }
+
+        return item;
+    });
+
+    saveCart(newCart);
+};
+
+const handleCheckout = () => {
+
+    const customer =
+        JSON.parse(
+            localStorage.getItem("customer")
+        );
+
+    if (!customer) {
+
+        alert(
+            "Vui lòng đăng nhập trước khi thanh toán"
+        );
+
+        navigate("/login");
+
+        return;
+    }
+
+    navigate("/checkout");
+};
+    const decreaseQty = (id) => {
+
+        const newCart = cartItems.map(
+            (item) =>
+                item.id === id
+                    ? {
+                          ...item,
+                          quantity: Math.max(
+                              1,
+                              item.quantity - 1
+                          ),
+                      }
+                    : item
+        );
+
+        saveCart(newCart);
+    };
+
+    const removeItem = (id) => {
+
+        const newCart =
+            cartItems.filter(
+                (item) => item.id !== id
+            );
+
+        saveCart(newCart);
+    };
+
     return (
-        <div className="min-h-screen bg-slate-50 py-16 px-4">
+        <>
+            <Header />
 
-            <div className="max-w-5xl mx-auto">
+            <section className="min-h-screen bg-slate-50 py-10">
 
-                {/* Header */}
-                <div className="mb-10">
-                    <h1 className="text-4xl font-bold text-slate-800">
-                        Giỏ Hàng
+                <div className="mx-auto max-w-7xl px-4">
+
+                    <h1 className="mb-8 text-4xl font-bold">
+                        Giỏ hàng
                     </h1>
-                    <p className="text-slate-500 mt-2">
-                        Kiểm tra các linh kiện trước khi đặt hàng
-                    </p>
-                </div>
 
-                {/* Empty Cart */}
-                <div className="bg-white rounded-3xl shadow-lg p-12 text-center">
+                    {cartItems.length === 0 ? (
 
-                    <div className="flex justify-center mb-6">
-                        <div className="w-28 h-28 rounded-full bg-cyan-100 flex items-center justify-center">
-                            <ShoppingCart
-                                size={55}
-                                className="text-cyan-600"
-                            />
-                        </div>
-                    </div>
+                        <div className="rounded-2xl bg-white p-10 text-center shadow">
 
-                    <h2 className="text-3xl font-bold text-slate-800 mb-3">
-                        Giỏ hàng đang trống
-                    </h2>
+                            <h2 className="text-2xl font-semibold text-slate-700">
+                                Giỏ hàng đang trống
+                            </h2>
 
-                    <p className="text-slate-500 max-w-xl mx-auto mb-8">
-                        Hiện tại bạn chưa thêm sản phẩm nào vào giỏ hàng.
-                        Khám phá hàng trăm linh kiện điện tử, Arduino, ESP32,
-                        cảm biến và module IoT tại cửa hàng.
-                    </p>
+                            <p className="mt-3 text-slate-500">
+                                Hãy chọn thêm sản phẩm để tiếp tục mua sắm.
+                            </p>
 
-                    <div className="flex flex-wrap justify-center gap-4 mb-10">
+                            <Link
+                                to="/shop"
+                                className="mt-6 inline-block rounded-xl bg-emerald-500 px-6 py-3 font-semibold text-white transition hover:bg-emerald-600"
+                            >
+                                Tiếp tục mua sắm
+                            </Link>
 
-                        <div className="bg-slate-100 px-5 py-3 rounded-xl flex items-center gap-2">
-                            <Cpu size={20} className="text-cyan-600" />
-                            <span>Arduino</span>
                         </div>
 
-                        <div className="bg-slate-100 px-5 py-3 rounded-xl flex items-center gap-2">
-                            <Package size={20} className="text-cyan-600" />
-                            <span>ESP32 & IoT</span>
-                        </div>
+                    ) : (
 
-                        <div className="bg-slate-100 px-5 py-3 rounded-xl flex items-center gap-2">
-                            <Cpu size={20} className="text-cyan-600" />
-                            <span>Cảm biến</span>
-                        </div>
+                        <CartTable
+                            cartItems={cartItems}
+                            increaseQty={
+                                increaseQty
+                            }
+                            decreaseQty={
+                                decreaseQty
+                            }
+                            removeItem={
+                                removeItem
+                            }
+                            onCheckout={handleCheckout}
+                        />
 
-                    </div>
-
-                    <Link
-                        to="/"
-                        className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg"
-                    >
-                        <ArrowLeft size={20} />
-                        Tiếp tục mua sắm
-                    </Link>
+                    )}
 
                 </div>
 
-            </div>
+            </section>
 
-        </div>
+            <Footer />
+        </>
     );
 }
 

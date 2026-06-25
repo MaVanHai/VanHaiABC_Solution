@@ -1,8 +1,45 @@
 import React from "react";
-
+import { useNavigate,Link } from "react-router-dom";
 const IMAGE_BASE_URL = "https://localhost:7218";
 
 function ProductCard({ item }) {
+    const navigate = useNavigate();
+    const handleBuyNow = () => {
+
+    const customer =
+        JSON.parse(
+            localStorage.getItem("customer")
+        );
+
+    if (!customer) {
+
+        alert("Vui lòng đăng nhập");
+
+        navigate("/login");
+
+        return;
+    }
+
+    const buyNowItem = {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        imageUrl: item.imageUrl,
+        stockQuantity: item.stockQuantity,
+        quantity: 1
+    };
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify([buyNowItem])
+    );
+
+    window.dispatchEvent(
+        new Event("cartUpdated")
+    );
+
+    navigate("/checkout");
+};
     const formatCurrency = (value) => {
         return new Intl.NumberFormat("vi-VN", {
             style: "currency",
@@ -26,11 +63,11 @@ function ProductCard({ item }) {
                     NEW
                 </span>
 
-           {item.stockQuantity > 0 && item.stockQuantity <= 5 && (
-    <span className="absolute right-3 top-3 rounded-full bg-red-500 px-3 py-1.5 text-sm font-bold text-white shadow-lg">
-        Còn {item.stockQuantity}
-    </span>
-)}
+                {item.stockQuantity > 0 && item.stockQuantity <= 5 && (
+            <span className="absolute right-3 top-3 rounded-full bg-red-500 px-3 py-1.5 text-sm font-bold text-white shadow-lg">
+                Còn {item.stockQuantity}
+            </span>
+            )}
             </div>
 
             {/* CONTENT */}
@@ -42,10 +79,13 @@ function ProductCard({ item }) {
                 </h3>
 
                 {/* DESCRIPTION */}
-<p className="mt-1 line-clamp-1 text-sm text-slate-500">
-    {item.description}
-</p>
 
+                <div
+                    className="mt-1 line-clamp-1 text-sm text-slate-500"
+                        dangerouslySetInnerHTML={{
+                         __html: item.description
+                        }}
+                />
                 {/* RATING */}
                 <div className="mt-3 flex items-center text-sm">
                     <div className="flex text-yellow-400">
@@ -62,29 +102,30 @@ function ProductCard({ item }) {
                 </div>
 
                 {/* PRICE */}
-<div className="mt-3 flex items-center gap-2">
-    <span className="text-xl font-bold text-red-500">
-        {formatCurrency(item.price)}
-    </span>
+                <div className="mt-3 flex items-center gap-2">
+                    <span className="text-xl font-bold text-red-500">
+                        {formatCurrency(item.price)}
+                    </span>
 
-    <span className="text-sm text-slate-400 line-through">
-        {formatCurrency(item.price * 1.2)}
-    </span>
-</div>
+                    <span className="text-sm text-slate-400 line-through">
+                        {formatCurrency(item.price * 1.2)}
+                    </span>
+                </div>
 
 
 
                 {/* BUTTONS */}
                 <div className="mt-4 flex gap-2">
 
-                    <a
-                        href={`/product/${item.id}`}
+                    <Link
+                        to={`/product/${item.id}`}
                         className="flex items-center justify-center rounded-lg border border-slate-200 px-3 py-2 text-slate-700 transition hover:bg-slate-100"
                     >
                         <i className="fas fa-eye"></i>
-                    </a>
+                    </Link>
 
                     <button
+                        onClick={handleBuyNow}
                         className="flex-1 rounded-lg bg-emerald-500 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-600"
                     >
                         <i className="fas fa-shopping-cart mr-2"></i>
